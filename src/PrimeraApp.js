@@ -1,27 +1,26 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-// Comunicación entre componentes con props
-
-// export const PrimeraApp = (props) => {   
-    
-//     return (
-//         <>
-//             <h1>{ props.saludo }</h1>
-            
-//             <p>Mi Primera Aplicación</p>
-//         </>
-//     )
-// }
-
-// Comunicación entre componentes con props usando desestructuración
-
-export const PrimeraApp = ({saludo}) => {   
+export const PrimeraApp = ({saludo, subtitulo}) => {   
     
     return (
         <>
             <h1>{ saludo }</h1>
             
-            <p>Mi Primera Aplicación</p>
+            <p> {subtitulo} </p>
         </>
     )
+}
+
+//PROPTYPES
+
+PrimeraApp.propTypes = {
+    saludo: PropTypes.string.isRequired
+}
+
+// DEFAULTPROPS 
+// Es más común ver el valor por defecto => export const PrimeraApp = ({saludo, subtítulo = 'Soy un subtitulo'})
+
+PrimeraApp.defaultProps = {
+    subtitulo: 'Soy un subtítulo'
 }
