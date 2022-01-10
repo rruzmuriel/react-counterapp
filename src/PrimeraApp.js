@@ -1,5 +1,10 @@
-import React from 'react'
+import React from 'react';
 
 export const PrimeraApp = () => {
-    return <h1>Hola Mundo desde el Componente</h1>
+    return (
+        <>
+            <h1>Hola Mundo</h1>
+            <p>Mi Primera Aplicación</p>
+        </>
+    )
 }
