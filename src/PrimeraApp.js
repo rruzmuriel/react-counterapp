@@ -1,18 +1,26 @@
 import React from 'react';
 
-export const PrimeraApp = () => {
+// Comunicación entre componentes con props
+
+// export const PrimeraApp = (props) => {   
     
-    const saludo = 'Hola Mundo';
-    
-    // const saludo2 = {
-    //     nombre: 'Rafa',
-    //     Pais: 'España'
-    // }
+//     return (
+//         <>
+//             <h1>{ props.saludo }</h1>
+            
+//             <p>Mi Primera Aplicación</p>
+//         </>
+//     )
+// }
+
+// Comunicación entre componentes con props usando desestructuración
+
+export const PrimeraApp = ({saludo}) => {   
     
     return (
         <>
             <h1>{ saludo }</h1>
-            {/* <pre>{ JSON.stringify(saludo2) }</pre> */}
+            
             <p>Mi Primera Aplicación</p>
         </>
     )
